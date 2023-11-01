@@ -11,7 +11,18 @@ let sumEl = document.querySelector('#sum-el');
 let cardEl = document.getElementById('card-el');
 
 function getRandomCard() {
-    return Math.floor(Math.random() * 10) + 2;
+    let randomNumber = Math.floor(Math.random() * 13) + 1;
+
+    if(randomNumber > 10){
+        return 10;
+    }
+    else if(randomNumber === 1){
+        return 11;
+    }
+    else {
+        return randomNumber;
+    }
+    
 }
 
 function startGame() {
@@ -43,14 +54,12 @@ function renderGame() {
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck!")
-    
+
     let thirdCard = getRandomCard();
     
     sum += thirdCard;
     
     cards.push(thirdCard);
-    console.log(cards);
 
     renderGame();
 }
