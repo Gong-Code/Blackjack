@@ -22,6 +22,7 @@ function renderGame() {
     }
 
     sumEl.textContent = 'Sum: ' + sum;    
+    
     if(sum <= 20) {
         message = "Do you want to draw a new card? ";
     }
