@@ -80,6 +80,7 @@ function newCard() {
 
 function resetGame() {
     location.reload();
+
 }
 
 
